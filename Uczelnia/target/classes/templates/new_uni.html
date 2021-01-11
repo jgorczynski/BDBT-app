@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xlmns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Nowa uczelnia</title>
+</head>
+<body>
+	<div align="center">
+		<!--  Page header  -->
+		<h1>Dodaj nową uczelnię</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${uczelnie}"
+			method=post></form>
+		<table border="1" cellpadding="10">
+			<tr>
+				<td>Nr uczelni</td>
+				<td><input type="text" th:field="*{nr_Uczelnia}"></td>
+			</tr>
+			<tr>
+				<td>Nazwa uczelni</td>
+				<td><input type="text" th:field="*{nazwa_U}"></td>
+			</tr>
+			<tr>
+				<td>Data założenia</td>
+				<td><input type="text" th:field="*{data_zalozenia}"></td>
+			</tr>
+			<tr>
+				<td>Adres e-mail</td>
+				<td><input type="text" th:field="*{mail}"></td>
+			</tr>
+			<tr>
+				<td>Nr telefonu</td>
+				<td><input type="text" th:field="*{telefon}"></td>
+			</tr>
+			<tr>
+				<td>Nr adresu</td>
+				<td><input type="text" th:field="*{nr_adresu}"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button type="submit">Zapisz dane</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
