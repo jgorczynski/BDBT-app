@@ -50,14 +50,14 @@ h1 {
 }
 
 /*---------------- hamburger menu ------------------*/
-body {
-	margin: 0;
-	padding: 0;
-	/* make it look decent enough */
-	background: #232323;
-	color: #cdcdcd;
-	font-family: "Avenir Next", "Avenir", sans-serif;
-}
+/* body { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	/* make it look decent enough */ */
+/* 	background: #232323; */
+/* 	color: #cdcdcd; */
+/* 	font-family: "Avenir Next", "Avenir", sans-serif; */
+/* } */
 
 #menuToggle {
 	display: block;
@@ -76,7 +76,7 @@ body {
 }
 
 #menuToggle a:hover {
-	color: tomato;
+	color: #009879;
 }
 
 #menuToggle input {
