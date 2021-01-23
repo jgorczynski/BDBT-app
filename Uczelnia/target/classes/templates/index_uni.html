@@ -50,7 +50,7 @@
 					<td th:text="${uczelnie.telefon}">Nr telefonu</td>
 					<td th:text="${uczelnie.nr_adresu}">Nr adresu</td>
 
-					<td><a
+					<td id="thyme_table"><a
 						th:href="@{'/uczelnie/edit/' + ${uczelnie.nr_Uczelnia}}">Edytuj</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
 						th:href="@{'/uczelnie/delete/' + ${uczelnie.nr_Uczelnia}}">Usuń</a></td>

@@ -49,6 +49,11 @@ h1 {
 	color: #7e2bc2;
 }
 
+a {
+	text-decoration: none;
+	color: rgb(84, 84, 206);
+}
+
 /*---------------- hamburger menu ------------------*/
 body {
 	margin: 0;
