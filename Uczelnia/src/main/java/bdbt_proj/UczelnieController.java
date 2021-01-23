@@ -38,7 +38,7 @@ public class UczelnieController {
 	public String save(@ModelAttribute("uczelnie") Uczelnie uczelnie) {
 		dao.save(uczelnie);
 
-		return "redirect:/";
+		return "redirect:/uczelnie/";
 	}
 
 	@RequestMapping("/edit/{id}")
@@ -54,13 +54,13 @@ public class UczelnieController {
 	public String update(@ModelAttribute("uczelnie") Uczelnie uczelnie) {
 		dao.update(uczelnie);
 
-		return "redirect:/";
+		return "redirect:/uczelnie/";
 	}
 
 	@RequestMapping("/delete/{id}")
 	public String delete(@PathVariable(name = "id") int id) {
 		dao.delete(id);
-		return "redirect:/";
+		return "redirect:/uczelnie/";
 	}
 
 }

@@ -26,7 +26,7 @@ public class PocztyDAO {
 	/* List for data from database */
 	public List<Poczty> list() {
 
-		String sql = "SELECT * FROM POCZTY ";
+		String sql = "SELECT * FROM POCZTY";
 		List<Poczty> listPoczty = jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(Poczty.class));
 		return listPoczty;
 	}
@@ -51,7 +51,7 @@ public class PocztyDAO {
 
 	/* (U)pdate - data inside database */
 	public void update(Poczty poczty) {
-		String sql = "UPDATE POCZTY SET nr_poczty=:nr_poczty, poczta=:poczta, kod_poczty=:kod_poczty";
+		String sql = "UPDATE POCZTY SET poczta=:poczta, kod_poczty=:kod_poczty WHERE nr_poczty=:nr_poczty";
 		BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(poczty);
 		NamedParameterJdbcTemplate template = new NamedParameterJdbcTemplate(jdbcTemplate);
 

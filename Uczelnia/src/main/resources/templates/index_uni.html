@@ -3,7 +3,7 @@
 	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<link href="/css/uni_style.css" type="text/css" rel="stylesheet"/>
+<link href="/css/uni_style.css" type="text/css" rel="stylesheet" />
 <title>Uczelnie</title>
 </head>
 <body>
@@ -36,12 +36,16 @@
 					<td th:text="${uczelnie.telefon}">Nr telefonu</td>
 					<td th:text="${uczelnie.nr_adresu}">Nr adresu</td>
 
-					<td><a th:href="@{'/uczelnie/edit/' + ${uczelnie.nr_Uczelnia}}">Edytuj</a>
+					<td><a
+						th:href="@{'/uczelnie/edit/' + ${uczelnie.nr_Uczelnia}}">Edytuj</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
 						th:href="@{'/uczelnie/delete/' + ${uczelnie.nr_Uczelnia}}">Usuń</a></td>
 				</tr>
 			</tbody>
 		</table>
+	</div>
+	<div align="justify">
+		<a href="/">Powrót do strony głównej</a>
 	</div>
 </body>
 

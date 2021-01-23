@@ -48,8 +48,8 @@ class PocztyDAOTest {
 	void testUpdate() {
 		Poczty poczty = new Poczty();
 		poczty.setNr_poczty(12);
-		poczty.setPoczta("Wroc³aw");
-		poczty.setKod_poczty("50-027");
+		poczty.setPoczta("Warszawa");
+		poczty.setKod_poczty("01-111");
 		
 		dao.update(poczty);
 	}

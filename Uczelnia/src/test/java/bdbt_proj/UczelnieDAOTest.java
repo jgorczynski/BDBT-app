@@ -48,12 +48,12 @@ class UczelnieDAOTest {
 	@Test
 	void testUpdate() {
 		Uczelnie uczelnie = new Uczelnie();
-		uczelnie.setNr_Uczelnia(2);
+		uczelnie.setNr_Uczelnia(3);
 		uczelnie.setNazwa_U("Uniwersytet Jagielloñski");
 		uczelnie.setData_zalozenia("1364/01/01");
 		uczelnie.setMail("centrala@uj.edu.pl");
 		uczelnie.setTelefon("336980778");
-		uczelnie.setNr_adresu(4);
+		uczelnie.setNr_adresu(8);
 		
 		dao.update(uczelnie);
 	}

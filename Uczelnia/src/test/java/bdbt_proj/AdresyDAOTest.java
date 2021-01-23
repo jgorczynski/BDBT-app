@@ -33,13 +33,13 @@ class AdresyDAOTest {
 
 	@Test
 	void testSave() {
-		Adresy adresy = new Adresy(8, "Warszawa", "Hirszfelda", "18/79", 6);
+		Adresy adresy = new Adresy(8, "Warszawa", "Hirszfelda", "18/79", 2);
 		dao.save(adresy);
 	}
 
 	@Test
 	void testGet() {
-		int nr_adresu = 2;
+		int nr_adresu = 8;
 		Adresy adresy = dao.get(nr_adresu);
 
 		assertNotNull(adresy);
@@ -48,18 +48,18 @@ class AdresyDAOTest {
 	@Test
 	void testUpdate() {
 		Adresy adresy = new Adresy();
-		adresy.setNr_adresu(2);
-		adresy.setMiasto("Wroc³aw");
-		adresy.setUlica("Malarska");
-		adresy.setNr_lokalu("12/24");
-		adresy.setNr_poczty(6);
+		adresy.setNr_adresu(8);
+		adresy.setMiasto("Warszawa");
+		adresy.setUlica("Jana Olbrachta");
+		adresy.setNr_lokalu("58/21");
+		adresy.setNr_poczty(3);
 
 		dao.update(adresy);
 	}
 
 	@Test
 	void testDelete() {
-		int nr_adresu = 2;
+		int nr_adresu = 8;
 
 		dao.delete(nr_adresu);
 	}

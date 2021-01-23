@@ -9,13 +9,23 @@
 <body>
 	<div align="center">
 		<!--  Page header  -->
-		<h1>Witaj w aplikacji!</h1>
-		
-			<a href="/uczelnie/">Uczelnie</a><br/>
-			<a href="/adresy/">Adresy</a><br/>
-			<a href="/poczty/">Poczty</a><br/>
-		
+		<h1>Witaj w aplikacji do zarządzania uczelnią!</h1>
+		<h2>Rozwiń menu po lewej i wybierz tabelę.</h2>
 	</div>
+
+	<nav role="navigation">
+		<div id="menuToggle">
+
+			<input type="checkbox" /> <span></span> <span></span> <span></span>
+
+			<ul id="menu">
+				<a id="uni" href="/uczelnie/"><li>Uczelnie</li></a>
+				<a id="address" href="/adresy/"><li>Adresy</li></a>
+				<a id="post" href="/poczty/"><li>Poczty</li></a>
+				<a id="logout" href="#"><li>Wyloguj się (TBD)</li></a>
+			</ul>
+		</div>
+	</nav>
 </body>
 
 </html>

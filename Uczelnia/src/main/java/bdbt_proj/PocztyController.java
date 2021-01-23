@@ -22,7 +22,7 @@ public class PocztyController {
 	public String viewHomePage(Model model) {
 
 		List<Poczty> listPoczty = dao.list();
-		model.addAttribute("listUczelnie", listPoczty);
+		model.addAttribute("listPoczty", listPoczty);
 		return "index_post";
 	}
 
