@@ -20,7 +20,7 @@ class PocztyDAOTest {
 		datasource.setUsername("SYSTEM");
 		datasource.setPassword("mA4YBUw!!!");
 		datasource.setDriverClassName("oracle.jdbc.OracleDriver");
-		
+
 		dao = new PocztyDAO(new JdbcTemplate(datasource));
 	}
 
@@ -32,22 +32,32 @@ class PocztyDAOTest {
 
 	@Test
 	void testSave() {
-		fail("Not yet implemented");
+		Poczty poczty = new Poczty(12, "Nowy S¹cz", "33-300");
+		dao.save(poczty);
 	}
 
 	@Test
 	void testGet() {
-		fail("Not yet implemented");
+		int nr_poczty = 12;
+		Poczty poczty = dao.get(nr_poczty);
+		
+		assertNotNull(poczty);
 	}
 
 	@Test
 	void testUpdate() {
-		fail("Not yet implemented");
+		Poczty poczty = new Poczty();
+		poczty.setNr_poczty(12);
+		poczty.setPoczta("Wroc³aw");
+		poczty.setKod_poczty("50-027");
+		
+		dao.update(poczty);
 	}
 
 	@Test
 	void testDelete() {
-		fail("Not yet implemented");
+		int nr_poczty = 12;
+		dao.delete(nr_poczty);
 	}
 
 }

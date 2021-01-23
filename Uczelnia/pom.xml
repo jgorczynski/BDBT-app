@@ -47,7 +47,10 @@
 			<scope>system</scope>
 			<systemPath>C:/Program Files/Java/jdk-13.0.2/lib/ojdbc10.jar</systemPath>
 		</dependency>
-
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-security</artifactId> -->
+<!-- 		</dependency> -->
 	</dependencies>
 
 	<build>

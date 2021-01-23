@@ -20,35 +20,48 @@ class AdresyDAOTest {
 		datasource.setUsername("SYSTEM");
 		datasource.setPassword("mA4YBUw!!!");
 		datasource.setDriverClassName("oracle.jdbc.OracleDriver");
-		
+
 		dao = new AdresyDAO(new JdbcTemplate(datasource));
 	}
 
 	@Test
 	void testList() {
 		List<Adresy> listAdresy = dao.list();
-//		assertTrue(listAdresy.isEmpty());
+
 		assertFalse(listAdresy.isEmpty());
 	}
 
 	@Test
 	void testSave() {
-		fail("Not yet implemented");
+		Adresy adresy = new Adresy(8, "Warszawa", "Hirszfelda", "18/79", 6);
+		dao.save(adresy);
 	}
 
 	@Test
 	void testGet() {
-		fail("Not yet implemented");
+		int nr_adresu = 2;
+		Adresy adresy = dao.get(nr_adresu);
+
+		assertNotNull(adresy);
 	}
 
 	@Test
 	void testUpdate() {
-		fail("Not yet implemented");
+		Adresy adresy = new Adresy();
+		adresy.setNr_adresu(2);
+		adresy.setMiasto("Wroc³aw");
+		adresy.setUlica("Malarska");
+		adresy.setNr_lokalu("12/24");
+		adresy.setNr_poczty(6);
+
+		dao.update(adresy);
 	}
 
 	@Test
 	void testDelete() {
-		fail("Not yet implemented");
+		int nr_adresu = 2;
+
+		dao.delete(nr_adresu);
 	}
 
 }

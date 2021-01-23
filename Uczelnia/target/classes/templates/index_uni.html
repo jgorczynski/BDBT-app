@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/uni_style.css" type="text/css" rel="stylesheet"/>
+<title>Uczelnie</title>
+</head>
+<body>
+	<div align="center">
+		<!--  Page header  -->
+		<h1>Uczelnie</h1>
+		<!-- Entry to the new page -->
+		<a href="/uczelnie/new">Dodaj nową uczelnię</a> <br /> <br />
+		<!-- Table -->
+		<table class="content-table">
+			<!-- Table header -->
+			<thead>
+				<tr>
+					<th>Nr uczelni</th>
+					<th>Nazwa uczelni</th>
+					<th>Data założenia</th>
+					<th>Adres e-mail</th>
+					<th>Nr telefonu</th>
+					<th>Nr adresu</th>
+					<th>Operacje</th>
+				</tr>
+			</thead>
+			<!-- Table body -->
+			<tbody>
+				<tr th:each="uczelnie:${listUczelnie}">
+					<td th:text="${uczelnie.nr_Uczelnia}">Nr uczelni</td>
+					<td th:text="${uczelnie.nazwa_U}">Nazwa uczelni</td>
+					<td th:text="${uczelnie.data_zalozenia}">Data założenia</td>
+					<td th:text="${uczelnie.mail}">Adres e-mail</td>
+					<td th:text="${uczelnie.telefon}">Nr telefonu</td>
+					<td th:text="${uczelnie.nr_adresu}">Nr adresu</td>
+
+					<td><a th:href="@{'/uczelnie/edit/' + ${uczelnie.nr_Uczelnia}}">Edytuj</a>
+						&nbsp;&nbsp;&nbsp;&nbsp; <a
+						th:href="@{'/uczelnie/delete/' + ${uczelnie.nr_Uczelnia}}">Usuń</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>

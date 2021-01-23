@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="/css/address_style.css" />
+<title>Edytuj dane adresu</title>
+</head>
+<body>
+	<div align="center">
+		<!--  Page header  -->
+		<h1>Edytuj dane adresu</h1>
+		<br />
+		<form action="#" th:action="@{/adresy/update}" th:object="${adresy}"
+			method="post">
+			<table class="content-table">
+				<tr>
+					<td>Nr adresu</td>
+					<td><input type="text" th:field="*{nr_adresu}"
+						readonly="readonly"></td>
+				</tr>
+				<tr>
+					<td>Miasto</td>
+					<td><input type="text" th:field="*{miasto}"></td>
+				</tr>
+				<tr>
+					<td>Ulica</td>
+					<td><input type="text" th:field="*{ulica}"></td>
+				</tr>
+				<tr>
+					<td>Nr lokalu</td>
+					<td><input type="text" th:field="*{nr_lokalu}"></td>
+				</tr>
+				<tr>
+					<td>Nr poczty</td>
+					<td><input type="text" th:field="*{nr_poczty}"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Zatwierdź
+							zmiany</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

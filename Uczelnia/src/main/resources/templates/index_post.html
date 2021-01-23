@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/post_style.css" type="text/css" rel="stylesheet"/>
+<title>Poczty</title>
+</head>
+<body>
+	<div align="center">
+		<!--  Page header  -->
+		<h1>Poczty</h1>
+		<!-- Entry to the new page -->
+		<a href="/poczty/new">Dodaj nową pocztę</a> <br /> <br />
+		<!-- Table -->
+		<table class="content-table">
+			<!-- Table header -->
+			<thead>
+				<tr>
+					<th>Nr poczty</th>
+					<th>Poczta</th>
+					<th>Kod poczty</th>
+					<th>Operacje</th>
+				</tr>
+			</thead>
+			<!-- Table body -->
+			<tbody>
+				<tr th:each="poczty:${listPoczty}">
+					<td th:text="${poczty.nr_poczty}">Nr poczty</td>
+					<td th:text="${poczty.poczta}">Poczta</td>
+					<td th:text="${poczty.kod_poczty}">Kod poczty</td>
+
+					<td><a th:href="@{'/poczty/edit/' + ${poczty.nr_poczty}}">Edytuj</a>
+						&nbsp;&nbsp;&nbsp;&nbsp; <a
+						th:href="@{'/poczty/delete/' + ${poczty.nr_poczty}}">Usuń</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>

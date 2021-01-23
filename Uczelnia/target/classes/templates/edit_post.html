@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="/css/post_style.css" />
+<title>Edytuj dane poczty</title>
+</head>
+<body>
+	<div align="center">
+		<!--  Page header  -->
+		<h1>Edytuj dane poczty</h1>
+		<br />
+		<form action="#" th:action="@{/poczty/update}" th:object="${poczty}"
+			method="post">
+			<table class="content-table">
+				<tr>
+					<td>Nr poczty</td>
+					<td><input type="text" th:field="*{nr_poczty}"
+						readonly="readonly"></td>
+				</tr>
+				<tr>
+					<td>Poczta</td>
+					<td><input type="text" th:field="*{nazwa_U}"></td>
+				</tr>
+				<tr>
+					<td>Kod poczty</td>
+					<td><input type="text" th:field="*{data_zalozenia}"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Zatwierdź
+							zmiany</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
