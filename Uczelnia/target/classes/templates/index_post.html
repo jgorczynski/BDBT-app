@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <link href="/css/post_style.css" type="text/css" rel="stylesheet" />
@@ -16,7 +17,7 @@
 				<a href="/"><li>Strona główna</li></a>
 				<a href="/uczelnie/"><li>Uczelnie</li></a>
 				<a href="/adresy/"><li>Adresy</li></a>
-				<a href="#"><li>Wyloguj się (TBD)</li></a>
+				<a href="/wylogowanie"><li>Wyloguj się</li></a>
 			</ul>
 		</div>
 	</nav>
@@ -24,7 +25,8 @@
 		<!--  Page header  -->
 		<h1>Poczty</h1>
 		<!-- Entry to the new page -->
-		<a href="/poczty/new">Dodaj nową pocztę</a> <br /> <br />
+		<a sec:authorize="hasRole('ADMIN')" href="/poczty/new">Dodaj nową
+			pocztę</a> <br /> <br />
 		<!-- Table -->
 		<table class="content-table">
 			<!-- Table header -->
@@ -43,8 +45,9 @@
 					<td th:text="${poczty.poczta}">Poczta</td>
 					<td th:text="${poczty.kod_poczty}">Kod poczty</td>
 
-					<td><a th:href="@{'/poczty/edit/' + ${poczty.nr_poczty}}">Edytuj</a>
-						&nbsp;&nbsp;&nbsp;&nbsp; <a
+					<td><a sec:authorize="hasRole('ADMIN')"
+						th:href="@{'/poczty/edit/' + ${poczty.nr_poczty}}">Edytuj</a>
+						&nbsp;&nbsp;&nbsp;&nbsp; <a sec:authorize="hasRole('ADMIN')"
 						th:href="@{'/poczty/delete/' + ${poczty.nr_poczty}}">Usuń</a></td>
 				</tr>
 			</tbody>

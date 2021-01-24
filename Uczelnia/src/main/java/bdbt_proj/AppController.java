@@ -1,20 +1,23 @@
 package bdbt_proj;
 
-//import java.util.List;
-
-//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-//import org.springframework.ui.Model;
-//import org.springframework.web.bind.annotation.ModelAttribute;
-//import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
-//import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/")
 public class AppController {
+	@RequestMapping("/login")
+	public String logowanie() {
+		return "login";
+	}
 
-	
+	@RequestMapping("/wylogowanie")
+	public String wylogowanie() {
+		return "login";
+	}
 
+	@RequestMapping("/login?error=true")
+	public String bladLogowania() {
+		return "login_retry";
+	}
 }

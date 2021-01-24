@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="/css/login.css" />
+<title>Panel logowania</title>
+</head>
+<body>
+	<h1>Zaloguj się</h1>
+
+	<p id="error_message">Nieudana próba logowania. Spróbuj ponownie.</p>
+	<form name='f' th:action="@{/login}" method='POST'>
+		<table>
+			<tr>
+				<td><input type='text' name='username' value=''
+					placeholder="nazwa użytkownika"></td>
+			</tr>
+			<tr>
+				<td><input type='password' name='password' placeholder="hasło" /></td>
+			</tr>
+			<tr>
+				<td><input name="submit" type="submit" value="OK" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
