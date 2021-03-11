@@ -1,3 +1,4 @@
 # BDBT_GRA_303938
 
-Uwaga: program w tutorialu jest konfigurowany na Javę 11, ja piszę na Javę 13 (*pom.xml*).
+An app developed during Databases and Big Data (BDBT) project class, fall semester 2020.
+Detailed documentation is available in the PDF file (Polish version).
